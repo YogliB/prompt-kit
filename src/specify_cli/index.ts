@@ -1,3 +1,65 @@
+// CLI ראשי
+const program = new Command();
+program
+	.name('specify')
+	.description('Setup tool for Specify spec-driven development projects')
+	.version('1.0.0');
+
+program
+	.command('init')
+	.description('Initialize a new Specify project')
+	.option('--ai <ai>', 'AI assistant to use')
+	.option('--script <type>', 'Script type to use')
+	.action(async (opts) => {
+		console.log(chalk.cyan.bold('Specify Project Setup'));
+		// בחירת AI
+		let selectedAI = opts.ai;
+		if (!selectedAI || !(selectedAI in AI_CHOICES)) {
+			selectedAI = await selectWithPrompt(AI_CHOICES, 'בחר AI:', 'copilot');
+		}
+		// בחירת סוג סקריפט
+		let selectedScript = opts.script;
+		if (!selectedScript || !(selectedScript in SCRIPT_TYPE_CHOICES)) {
+			selectedScript = await selectWithPrompt(SCRIPT_TYPE_CHOICES, 'בחר סוג סקריפט:', 'sh');
+		}
+		console.log(chalk.green(`נבחר AI: ${selectedAI}`));
+		console.log(chalk.green(`נבחר סוג סקריפט: ${selectedScript}`));
+		// כאן תתווסף לוגיקת יצירת פרויקט מלאה
+	});
+
+program.parseAsync(process.argv);
+// פונקציה לבחירה אינטראקטיבית
+export async function selectWithPrompt(options: Record<string, string>, promptText = 'בחר אפשרות', defaultKey?: string): Promise<string> {
+	const choices = Object.entries(options).map(([key, desc]) => ({
+		name: `${key}: ${desc}`,
+		value: key,
+		short: key,
+	}));
+	const { selected } = await inquirer.prompt([
+		{
+			type: 'list',
+			name: 'selected',
+			message: promptText,
+			choices,
+			default: defaultKey,
+		},
+	]);
+	return selected;
+}
+
+// פונקציה להרצת פקודות shell
+import { exec } from 'child_process';
+export function runCommand(cmd: string, capture = false): Promise<string | void> {
+	return new Promise((resolve, reject) => {
+		exec(cmd, (error, stdout, stderr) => {
+			if (error) {
+				reject(stderr || error.message);
+			} else {
+				resolve(capture ? stdout.trim() : undefined);
+			}
+		});
+	});
+}
 // Entry point for Specify CLI (TypeScript version)
 // To be ממומש: CLI logic, interactive selection, file operations, shell commands
 
