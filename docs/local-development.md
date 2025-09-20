@@ -26,7 +26,7 @@ python -m src.specify_cli init demo-project --ai claude --ignore-agent-tools --s
 If you prefer invoking the script file style (uses shebang):
 
 ```bash
-python src/specify_cli/__init__.py init demo-project --script ps
+node dist/specify_cli/index.js init demo-project --script ps
 ```
 
 ## 3. Use Editable Install (Isolated Environment)
