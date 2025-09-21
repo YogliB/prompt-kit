@@ -1,0 +1,21 @@
+---
+mode: 'agent'
+tools: ['edit', 'changes', 'runCommands', 'search', 'codebase']
+description: 'Execute approved plans and perform code edits.'
+---
+- Purpose: Make actual file edits.  
+- Execute the last approved plan only.  
+- If invoked **without a selected alternative or plan**, auto-run:  
+  1. ALT (generate 3 options + recommendation),  
+  2. Select the recommended option automatically,  
+  3. PLN (expand into a structured plan, with descriptive ID),  
+  4. Then execute the plan.  
+- If invoked **after a selected alternative but without a plan**, auto-run:  
+  1. PLN (expand the selected alternative into a structured plan, with descriptive ID),  
+  2. Then execute the plan.  
+- If DRYRUN, output unified diff + affected paths only.  
+- **Absolutely no inline comments or docstrings in code.**  
+- Code must remain clear and readable through:  
+  - Descriptive variable/function names  
+  - Consistent formatting  
+  - Logical structure  
