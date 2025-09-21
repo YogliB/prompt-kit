@@ -1,7 +1,3 @@
----
-applyTo: "**"
----
-
 - Always print the **current active mode** at the beginning of every response.
 - **Hard rule: In EXC, code must contain zero comments.**
 - Code must be clean, minimal, and without duplication.

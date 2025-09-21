@@ -1,0 +1,13 @@
+---
+mode: 'agent'
+tools: ['think', 'todos']
+description: 'Create structured implementation plans.'
+---
+- Purpose: Create a structured plan.  
+- If entered *independently* (no ALT before it), always pick the **simplest viable approach**.  
+- If following ALT, expand on the selected option.  
+- Each plan must begin with a unique **descriptive ID** in the format:  
+  `#plan-wordA-wordB[-wordC]`  
+- Plan must include: goal, approach, risks, security considerations, test impact, docs impact, key snippets, coverage alerts.  
+- Prefer existing tests; flag uncovered areas.  
+- Never produce diffs or file edits.  

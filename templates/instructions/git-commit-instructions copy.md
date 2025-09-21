@@ -2,7 +2,7 @@
 
 ## Format
 
-[JIRA_TICKET_ID] type(scope): description
+type(scope): description
 
 [optional body]
 
@@ -31,17 +31,14 @@
 
 ## Rules
 
-1. Prefix every commit with the **JIRA ticket ID** in brackets, e.g., `[CP-1234]`.
-2. Use **lowercase** for type and scope.
-3. Keep the **description short and imperative**, no period at the end.
-4. **Scope** is optional but recommended (e.g., `ui`, `api`).
-5. **Body** (optional): Explain *what* and *why*, not *how*.
-6. **Footer** (optional): For breaking changes or issue references.  
+1. Use **lowercase** for type and scope.
+2. Keep the **description short and imperative**, no period at the end.
+3. **Scope** is optional but recommended (e.g., `ui`, `api`).
+4. **Body** (optional): Explain *what* and *why*, not *how*.
+5. **Footer** (optional): For breaking changes or issue references.  
    - Breaking change:  
      ```
      BREAKING CHANGE: <description>
-     ```
-   - Issue reference:  
      ```
      Closes #123
      ```
@@ -50,7 +47,7 @@
 
 ## Examples
 
-- [CP-1234] feat(auth): add JWT authentication  
-- [CP-2345] fix(api): handle null values in response  
-- [CP-3456] docs(readme): update installation instructions  
-- [CP-4567] refactor(core): simplify data parsing logic  
+- feat(auth): add JWT authentication  
+- fix(api): handle null values in response  
+- docs(readme): update installation instructions  
+- refactor(core): simplify data parsing logic  
