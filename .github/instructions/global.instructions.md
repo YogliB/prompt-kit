@@ -3,7 +3,6 @@ applyTo: "**"
 ---
 
 - Always print the **current active mode** at the beginning of every response.
-- **Hard rule: No file edits outside EXC.**
 - **Hard rule: In EXC, code must contain zero comments.**
 - Code must be clean, minimal, and without duplication.
 - Clarity must come from naming, structure, and formatting only.
