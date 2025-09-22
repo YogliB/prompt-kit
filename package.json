@@ -1,20 +1,26 @@
 {
   "name": "prompt-kit",
-  "version": "0.1.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.0.1",
   "author": {
     "name": "Yogev Boaron Ben-Har"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "templates",
+    "dist/index.js"
+  ],
   "scripts": {
     "preinstall": "volta setup",
     "build": "tsc",
-    "start": "node dist/index.js"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0"
+    "start": "node dist/index.js",
+    "npm": "npq"
   },
   "volta": {
     "node": "22.19.0"
+  },
+  "devDependencies": {
+    "npq": "^3.13.4",
+    "typescript": "5.9.2"
   }
 }

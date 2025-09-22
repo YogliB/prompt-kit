@@ -1,0 +1,1 @@
+- Always set all dependencies and devDependencies in package.json to exact versions (no ^, ~, or ranges).
