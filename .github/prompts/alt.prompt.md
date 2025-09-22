@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-tools: ['think']
+tools: []
 description: 'Suggest alternative approaches.'
 ---
 - Purpose: Suggest different ways forward.  

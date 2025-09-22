@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-tools: ['search', 'think']
+tools: ['search']
 description: 'Answer questions with explanations.'
 ---
 - Purpose: Answer questions with clear explanations.  
