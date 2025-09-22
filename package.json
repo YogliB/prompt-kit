@@ -1,15 +1,17 @@
 {
-  "name": "prompt-kit-cli",
-  "version": "1.0.0",
+  "name": "prompt-kit",
+  "version": "0.1.0",
   "main": "dist/index.js",
-  "type": "module",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "preinstall": "volta setup",
     "build": "tsc",
     "start": "node dist/index.js"
   },
-  "dependencies": {
-  },
   "devDependencies": {
-
+    "typescript": "^5.0.0"
+  },
+  "volta": {
+    "node": "22.19.0"
   }
-  }
+}
