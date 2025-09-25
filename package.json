@@ -22,8 +22,13 @@
 		"node": "22.19.0"
 	},
 	"lint-staged": {
-		"!(*.ts)": "prettier --write --ignore-unknown",
-		"*.(js|ts|tsx)": [
+		"!(*.(js|ts))": "prettier --write --ignore-unknown",
+		"*.ts": [
+			"prettier --write",
+			"eslint --fix",
+			"vitest --run --findRelatedTests"
+		],
+		"*.js": [
 			"prettier --write",
 			"eslint --fix"
 		]
