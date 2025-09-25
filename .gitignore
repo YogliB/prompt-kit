@@ -2,3 +2,4 @@
 node_modules
 .github/prompts
 .github/instructions
+dist

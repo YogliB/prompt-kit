@@ -4,19 +4,27 @@
 	"author": {
 		"name": "Yogev Boaron Ben-Har"
 	},
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"type": "module",
+	"bin": {
+		"your-cli": "dist/index.js"
+	},
 	"files": [
 		"templates",
-		"dist/index.js"
+		"dist"
 	],
+	"engines": {
+		"node": ">=18"
+	},
 	"scripts": {
-		"build": "tsc",
-		"start": "node dist/index.js",
+		"build": "node scripts/build.mjs",
+		"dev": "concurrently -k -n \"DEV,TS\" -c \"cyan,magenta\" \"npm:ts:watch\" \"npm:ts:check\"",
 		"prepare": "volta setup && husky",
-		"test": "vitest run",
+		"prepublishOnly": "npm run build",
+		"start": "node dist/index.js",
 		"test:watch": "vitest",
-		"dev": "node src/index.ts"
+		"test": "vitest run",
+		"ts:check": "tsc --noEmit",
+		"ts:watch": "tsx watch src/index.ts"
 	},
 	"volta": {
 		"node": "22.19.0"
@@ -36,11 +44,14 @@
 	"devDependencies": {
 		"@eslint/js": "9.36.0",
 		"@types/node": "24.5.2",
+		"concurrently": "9.2.1",
+		"esbuild": "0.25.10",
 		"eslint": "9.36.0",
 		"eslint-config-prettier": "10.1.8",
 		"husky": "9.1.7",
 		"lint-staged": "16.2.0",
 		"prettier": "3.6.2",
+		"tsx": "4.20.5",
 		"typescript": "5.9.2",
 		"typescript-eslint": "8.44.1",
 		"vitest": "3.2.4"
