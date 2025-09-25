@@ -19,5 +19,4 @@ await build({
 });
 
 chmodSync(outfile, 0o755); // make it executable on POSIX
-// eslint-disable-next-line no-undef
 console.log('Built', outfile);
