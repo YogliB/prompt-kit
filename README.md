@@ -29,6 +29,13 @@ npx prompt-kit init
 ```
 Prints `Initialized` and exits with code 0.
 
+```
+
+npx prompt-kit help
+
+```
+Prints usage information and exits with code 0.
+
 Any other command prints `Unknown command` and exits with code 1.
 
 ## Security Considerations

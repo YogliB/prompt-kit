@@ -14,4 +14,13 @@ describe('cli', () => {
 		expect(result.stderr.toString()).toBe('Unknown command\n');
 		expect(result.status).toBe(1);
 	});
+
+	it('prints help for help', () => {
+		const result = spawnSync('node', [join(__dirname, 'index.ts'), 'help']);
+		expect(result.stdout.toString()).toContain(
+			'Usage: prompt-kit <command>',
+		);
+		expect(result.stdout.toString()).toContain('Commands:');
+		expect(result.status).toBe(0);
+	});
 });
