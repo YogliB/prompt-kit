@@ -34,7 +34,7 @@
 		"*.ts": [
 			"prettier --write",
 			"eslint --fix",
-			"vitest --run --findRelatedTests"
+			"vitest related --run"
 		],
 		"*.js": [
 			"prettier --write",

@@ -11,10 +11,12 @@ const ascii = `
 console.log(ascii);
 
 if (process.argv[2] === 'init') {
-	runInit();
+	runInit(process.argv.slice(3));
+	process.exit(0);
 }
 if (process.argv[2] === 'help') {
 	runHelp();
+	process.exit(0);
 }
 process.stderr.write('Unknown command. Run `prompt-kit help` for usage.\n');
 process.exit(1);
