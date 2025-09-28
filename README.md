@@ -1,20 +1,21 @@
-prompt-kit
-=================
+# prompt-kit
 
 A new CLI generated with oclif
-
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/prompt-kit.svg)](https://npmjs.org/package/prompt-kit)
 [![Downloads/week](https://img.shields.io/npm/dw/prompt-kit.svg)](https://npmjs.org/package/prompt-kit)
 
-
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g prompt-kit
 $ prompt-kit COMMAND
@@ -26,22 +27,26 @@ USAGE
   $ prompt-kit COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`prompt-kit hello PERSON`](#prompt-kit-hello-person)
-* [`prompt-kit hello world`](#prompt-kit-hello-world)
-* [`prompt-kit help [COMMAND]`](#prompt-kit-help-command)
-* [`prompt-kit plugins`](#prompt-kit-plugins)
-* [`prompt-kit plugins add PLUGIN`](#prompt-kit-plugins-add-plugin)
-* [`prompt-kit plugins:inspect PLUGIN...`](#prompt-kit-pluginsinspect-plugin)
-* [`prompt-kit plugins install PLUGIN`](#prompt-kit-plugins-install-plugin)
-* [`prompt-kit plugins link PATH`](#prompt-kit-plugins-link-path)
-* [`prompt-kit plugins remove [PLUGIN]`](#prompt-kit-plugins-remove-plugin)
-* [`prompt-kit plugins reset`](#prompt-kit-plugins-reset)
-* [`prompt-kit plugins uninstall [PLUGIN]`](#prompt-kit-plugins-uninstall-plugin)
-* [`prompt-kit plugins unlink [PLUGIN]`](#prompt-kit-plugins-unlink-plugin)
-* [`prompt-kit plugins update`](#prompt-kit-plugins-update)
+
+- [`prompt-kit hello PERSON`](#prompt-kit-hello-person)
+- [`prompt-kit hello world`](#prompt-kit-hello-world)
+- [`prompt-kit help [COMMAND]`](#prompt-kit-help-command)
+- [`prompt-kit plugins`](#prompt-kit-plugins)
+- [`prompt-kit plugins add PLUGIN`](#prompt-kit-plugins-add-plugin)
+- [`prompt-kit plugins:inspect PLUGIN...`](#prompt-kit-pluginsinspect-plugin)
+- [`prompt-kit plugins install PLUGIN`](#prompt-kit-plugins-install-plugin)
+- [`prompt-kit plugins link PATH`](#prompt-kit-plugins-link-path)
+- [`prompt-kit plugins remove [PLUGIN]`](#prompt-kit-plugins-remove-plugin)
+- [`prompt-kit plugins reset`](#prompt-kit-plugins-reset)
+- [`prompt-kit plugins uninstall [PLUGIN]`](#prompt-kit-plugins-uninstall-plugin)
+- [`prompt-kit plugins unlink [PLUGIN]`](#prompt-kit-plugins-unlink-plugin)
+- [`prompt-kit plugins update`](#prompt-kit-plugins-update)
 
 ## `prompt-kit hello PERSON`
 
@@ -394,4 +399,5 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.4.48/src/commands/plugins/update.ts)_
+
 <!-- commandsstop -->
