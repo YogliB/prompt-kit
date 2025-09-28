@@ -6,7 +6,7 @@
   "bin": {
     "prompt-kit": "./bin/run.js"
   },
-  "bugs": "https://github.com/oss/prompt-kit/issues",
+  "bugs": "https://github.com/YogliB/prompt-kit/issues",
   "dependencies": {
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
@@ -37,7 +37,7 @@
     "./dist",
     "./oclif.manifest.json"
   ],
-  "homepage": "https://github.com/oss/prompt-kit",
+  "homepage": "https://github.com/YogliB/prompt-kit",
   "keywords": [
     "oclif"
   ],
