@@ -5,11 +5,18 @@
 **Status**: Draft  
 **Input**: User description: "$ARGUMENTS"
 
+## Clarifications
+
+### Session 2025-09-28
+
+- Q: What should the CLI accept as the feature's input? → A: Select an existing named template (template-driven scaffolding)
+
 ## Execution Flow (main)
 
 ```
 1. Parse user description from Input
    → If empty: ERROR "No feature description provided"
+   Note: Input is expected to be a named template identifier. The CLI selects a scaffold template by name; freeform natural-language descriptions are out-of-scope for this feature.
 2. Extract key concepts from description
    → Identify: actors, actions, data, constraints
 3. For each unclear aspect:
@@ -61,12 +68,16 @@ When creating this spec from a user prompt:
 
 ### Primary User Story
 
-[Describe the main user journey in plain language]
+As a developer, I run the CLI and provide a template name to scaffold a project. The CLI validates the template name, copies scaffold files, and outputs success or a descriptive error.
 
 ### Acceptance Scenarios
 
 1. **Given** [initial state], **When** [action], **Then** [expected outcome]
 2. **Given** [initial state], **When** [action], **Then** [expected outcome]
+
+3. **Given** a valid template name, **When** the user runs the CLI with that name, **Then** the scaffold files are generated in the target directory and a success message is printed.
+
+4. **Given** an invalid or unknown template name, **When** the user runs the CLI, **Then** the CLI returns an error listing available templates.
 
 ### Edge Cases
 
@@ -82,6 +93,11 @@ When creating this spec from a user prompt:
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+
+- **FR-TPL-001**: CLI MUST accept a named template identifier as input.
+- **FR-TPL-002**: CLI MUST validate that the template exists and return a list of available templates if the name is unknown.
+- **FR-TPL-003**: CLI MUST copy scaffold files from the selected template into the user's target directory.
+- **FR-TPL-004**: CLI MUST provide a clear success message and non-zero exit code on error.
 
 _Example of marking unclear requirements:_
 
