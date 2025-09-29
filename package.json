@@ -3,78 +3,19 @@
   "description": "A new CLI generated with oclif",
   "version": "0.0.0",
   "author": "YogliB",
-  "bin": {
-    "prompt-kit": "./bin/run.js"
-  },
   "bugs": "https://github.com/YogliB/prompt-kit/issues",
-  "dependencies": {
-    "@oclif/core": "^4",
-    "@oclif/plugin-help": "^6",
-    "@oclif/plugin-plugins": "^5"
-  },
   "devDependencies": {
-    "@eslint/compat": "^1",
-    "@oclif/prettier-config": "^0.2.1",
-    "@oclif/test": "^4",
-    "@types/chai": "^4",
-    "@types/mocha": "^10",
-    "@types/node": "^18",
-    "chai": "^4",
-    "eslint": "^9",
-    "eslint-config-oclif": "^6",
-    "eslint-config-prettier": "^10",
     "husky": "9.1.7",
     "lint-staged": "16.2.2",
-    "mocha": "^10",
-    "oclif": "^4",
-    "prettier": "3.6.2",
-    "shx": "^0.3.3",
-    "ts-node": "^10",
-    "typescript": "^5"
+    "prettier": "3.6.2"
   },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "files": [
-    "./bin",
-    "./dist",
-    "./oclif.manifest.json"
-  ],
   "homepage": "https://github.com/YogliB/prompt-kit",
-  "keywords": [
-    "oclif"
-  ],
   "license": "MIT",
-  "main": "dist/index.js",
   "type": "module",
-  "oclif": {
-    "bin": "prompt-kit",
-    "dirname": "prompt-kit",
-    "commands": "./dist/commands",
-    "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
-  },
-  "repository": "oss/prompt-kit",
   "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "npm run lint",
-    "prepack": "oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md",
     "prepare": "volta setup && husky",
     "format": "prettier --write ."
   },
-  "types": "dist/index.d.ts",
   "lint-staged": {
     "*.{js,ts}": [
       "prettier --write",
