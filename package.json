@@ -1,31 +1,31 @@
 {
-  "name": "prompt-kit",
-  "description": "A new CLI generated with oclif",
-  "version": "0.0.0",
-  "author": "YogliB",
-  "bugs": "https://github.com/YogliB/prompt-kit/issues",
-  "devDependencies": {
-    "husky": "9.1.7",
-    "lint-staged": "16.2.2",
-    "prettier": "3.6.2"
-  },
-  "homepage": "https://github.com/YogliB/prompt-kit",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "prepare": "volta setup && husky",
-    "format": "prettier --write ."
-  },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "!*.{js,ts}": [
-      "prettier --write --ignore-unknown"
-    ]
-  },
-  "volta": {
-    "node": "22.20.0"
-  }
+	"name": "prompt-kit",
+	"description": "prompt-kit: developer prompt utilities",
+	"version": "0.0.0",
+	"author": "YogliB",
+	"bugs": "https://github.com/YogliB/prompt-kit/issues",
+	"devDependencies": {
+		"husky": "9.1.7",
+		"lint-staged": "16.2.2",
+		"prettier": "3.6.2"
+	},
+	"homepage": "https://github.com/YogliB/prompt-kit",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"prepare": "volta setup && husky",
+		"format": "prettier --write ."
+	},
+	"lint-staged": {
+		"*.{js,ts}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"!*.{js,ts}": [
+			"prettier --write --ignore-unknown"
+		]
+	},
+	"volta": {
+		"node": "22.20.0"
+	}
 }
