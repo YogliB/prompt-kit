@@ -38,10 +38,10 @@ Once all alternatives are presented:
 ### 2. Plan ID
 
 - Start every plan with a unique ID:
-  - Format: `#plan-YYYY-MM-wordA-wordB[-wordC]`
-  - Examples:
-    - `#plan-2025-10-cleanup-api-tests`
-    - `#plan-2025-10-add-user-auth`
+    - Format: `#plan-YYYY-MM-wordA-wordB[-wordC]`
+    - Examples:
+        - `#plan-2025-10-cleanup-api-tests`
+        - `#plan-2025-10-add-user-auth`
 
 ### 3. Documentation Research
 
@@ -60,7 +60,34 @@ After a plan is finalized and the **user starts execution mode**, the plan must 
   `.ai/templates/plan.template.md`.
 - This ensures the plan and its execution logic remain synchronized.
 
-### 5. Context & Expansion
+---
+
+### 5. Plan-to-File Step After Plan Mode
+
+**Purpose:** Ensure that every plan generated in Plan Mode is written to a `.clinerules` markdown file **before any execution begins**.
+
+**Trigger Rule:**
+
+1. After the plan is finalized in Plan Mode, **Cline must write the plan** to `.clinerules/plans/[plan-id].md` immediately.
+2. The plan file must follow **exactly the same structure** and section order as `.ai/templates/plan.template.md`.
+3. Internal TODOs may be more detailed, but only the high-level tasks from the finalized plan are included in the file.
+4. No Act Mode execution occurs until the plan file exists on disk.
+
+**Workflow Integration:**
+
+- Step 1: User approves plan in Plan Mode.
+- Step 2: Cline writes plan to `.clinerules/plans/[plan-id].md`.
+- Step 3: User switches to Act Mode (⌘⇧A) to begin task execution.
+
+**Notes:**
+
+- Ensures a **persistent record of the approved plan** exists, separate from internal execution tracking.
+- Manual edits to the `.clinerules` file must remain consistent with the plan template structure.
+- Optional: Add a confirmation log stating the file was created successfully.
+
+---
+
+### 6. Context & Expansion
 
 - If no alternatives were given, use the simplest viable approach.
 - If alternatives exist, expand **only** the selected option into the plan and later into the `.clinerules` rule file.
