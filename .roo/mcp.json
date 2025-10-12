@@ -1,0 +1,16 @@
+{
+	"mcpServers": {
+		"fetch": {
+			"command": "docker",
+			"args": ["run", "-i", "--rm", "mcp/fetch"]
+		},
+		"playwright": {
+			"command": "docker",
+			"args": ["run", "-i", "--rm", "mcp/playwright"]
+		},
+		"sequentialthinking": {
+			"command": "docker",
+			"args": ["run", "-i", "--rm", "mcp/sequentialthinking"]
+		}
+	}
+}
