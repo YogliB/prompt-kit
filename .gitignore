@@ -15,3 +15,8 @@ pnpm-lock.yaml
 .vscode/settings.json
 
 tsconfig.tsbuildinfo
+
+# AI-related templates and configurations
+.clinerules
+.roo
+.github/chatmodes
